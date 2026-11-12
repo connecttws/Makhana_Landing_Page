@@ -1,0 +1,60 @@
+{
+  "theme": {
+    "colors": {
+      "brand": {
+        "primary": "#1F5C4A",
+        "primaryHover": "#164638",
+        "secondary": "#2F856C",
+        "accent": "#FF7A00",
+        "accentHover": "#E65100",
+        "accentLight": "#FFE8D6",
+        "forestMint": "#DBE9E0"
+      },
+      "surface": {
+        "base": "#FFF8F1",
+        "card": "#FFFFFF",
+        "subtle": "#FFF4E8",
+        "softCream": "#F9F6F0",
+        "footer": "#143D31"
+      },
+      "border": {
+        "base": "#F0E5D8",
+        "focus": "#1F5C4A"
+      },
+      "text": {
+        "primary": "#222222",
+        "heading": "#1A1A1A",
+        "muted": "#555555",
+        "stone": "#777777",
+        "inverse": "#FFFFFF"
+      }
+    },
+    "typography": {
+      "fonts": {
+        "display": "Montserrat, sans-serif",
+        "body": "Montserrat, sans-serif"
+      },
+      "scale": {
+        "hero": "text-4xl sm:text-5xl lg:text-[3.6rem]",
+        "sectionTitle": "text-3xl sm:text-4xl lg:text-5xl",
+        "cardTitle": "text-lg sm:text-xl",
+        "body": "text-sm sm:text-base",
+        "caption": "text-xs"
+      }
+    },
+    "components": {
+      "button": {
+        "primary": "px-8 py-4 text-xs sm:text-sm font-extrabold text-white bg-[#1F5C4A] hover:bg-[#164638] rounded-full shadow-lg uppercase tracking-wider",
+        "secondary": "px-7 py-4 text-xs sm:text-sm font-extrabold text-[#1F5C4A] bg-white border-2 border-[#1F5C4A] hover:bg-[#F0F7F4] rounded-full uppercase tracking-wider",
+        "accent": "px-8 py-4 text-xs sm:text-sm font-extrabold text-white bg-[#FF7A00] hover:bg-[#E65100] rounded-full shadow-lg uppercase tracking-wider"
+      },
+      "badge": {
+        "green": "hom-badge-green px-3 py-1 rounded-full",
+        "orange": "hom-badge-orange px-3 py-1 rounded-full"
+      },
+      "card": {
+        "standard": "hom-card p-6 sm:p-7 rounded-[20px]"
+      }
+    }
+  }
+}

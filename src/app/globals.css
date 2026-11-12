@@ -1,0 +1,176 @@
+@import "tailwindcss";
+@source "../";
+@source "../components";
+@source "../app";
+
+@theme {
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-sans: 'Montserrat', sans-serif;
+}
+
+@layer base {
+  :root {
+    --font-display: 'Montserrat', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: #222222;
+    background-color: #FFF8F1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #1A1A1A;
+  }
+
+  p, span, a, button, input, select, textarea {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+.font-display {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-heading {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* House of Makhana Inspired Card Architecture */
+.hom-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid #F0E5D8;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hom-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(31, 92, 74, 0.12);
+  border-color: #1F5C4A;
+}
+
+.hom-card-accent {
+  background: #FFFFFF;
+  border-radius: 20px;
+  border: 2px solid #1F5C4A;
+  box-shadow: 0 10px 30px rgba(31, 92, 74, 0.1);
+}
+
+/* House of Makhana Pill Buttons */
+.hom-btn-primary {
+  background-color: #1F5C4A;
+  color: #FFFFFF;
+  border-radius: 9999px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: all 0.25s ease;
+}
+
+.hom-btn-primary:hover {
+  background-color: #164638;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(31, 92, 74, 0.25);
+}
+
+.hom-btn-accent {
+  background: linear-gradient(135deg, #FF7A00 0%, #E65100 100%);
+  color: #FFFFFF;
+  border-radius: 9999px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: all 0.25s ease;
+}
+
+.hom-btn-accent:hover {
+  background: linear-gradient(135deg, #E65100 0%, #BF360C 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(230, 81, 0, 0.25);
+}
+
+.hom-btn-secondary {
+  background-color: #FFFFFF;
+  color: #1F5C4A;
+  border: 2px solid #1F5C4A;
+  border-radius: 9999px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: all 0.25s ease;
+}
+
+.hom-btn-secondary:hover {
+  background-color: #F0F7F4;
+  transform: translateY(-2px);
+}
+
+/* House of Makhana Section Heading Underline */
+.hom-title-underline {
+  width: 50px;
+  height: 4px;
+  background-color: #1F5C4A;
+  border-radius: 9999px;
+  margin: 10px auto 0;
+}
+
+.hom-title-underline-orange {
+  width: 50px;
+  height: 4px;
+  background-color: #FF7A00;
+  border-radius: 9999px;
+  margin: 10px auto 0;
+}
+
+/* Rounded Badges */
+.hom-badge-green {
+  background-color: #DBE9E0;
+  color: #1F5C4A;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.hom-badge-orange {
+  background-color: #FFE8D6;
+  color: #D9480F;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF8F1;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8CCC0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8ABA0;
+}

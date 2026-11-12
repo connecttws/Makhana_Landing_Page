@@ -1,0 +1,169 @@
+{
+  "brand": {
+    "name": "Mithila Naturale",
+    "wordmark": "MITHILA NATURALE",
+    "tagline": "Artisanal Jumbo Makhana",
+    "giCertificate": "GI Certificate No. 842 · Protected Geographic Origin"
+  },
+  "promoBanner": {
+    "highlight": "GI-Tagged Mithila Origin",
+    "subtext": "Wood-Fire Roasted Jumbo 6+ Soot Lotus Seeds",
+    "freeDeliveryText": "Free Express Delivery over ₹499",
+    "coupon": "CRUNCH10",
+    "couponDiscount": "10% OFF"
+  },
+  "navigation": [
+    { "label": "The Superfood", "href": "#superfood" },
+    { "label": "Select Pack", "href": "#purchase" },
+    { "label": "Origin & Craft", "href": "#harvest" },
+    { "label": "Nutrition Facts", "href": "#nutrition" },
+    { "label": "Reviews", "href": "#reviews" }
+  ],
+  "hero": {
+    "metadata": ["Mithila GI Tagged", "6+ Soot Jumbo Grade", "Cold-Pressed Olive Oil"],
+    "headline": "Ancient Lotus Superfood. Pure Himalayan Salt & Olive Oil Crunch.",
+    "description": "Direct from the sacred wetland ponds of Northern Bihar. We hand-select only the top 10% jumbo kernels, slow-pop them in clay iron pans over hardwood coals, and glaze with mineral-rich Himalayan salt. Zero palm oil, 100% natural superfood.",
+    "primaryPrice": "₹449",
+    "originalPrice": "₹598",
+    "savingsText": "Save ₹149 · Twin Duo (500g)",
+    "primaryCta": "Order Now — ₹449",
+    "secondaryCta": "Choose Pack & Flavors",
+    "rating": "4.9/5",
+    "reviewCount": "1,480+ Reviews",
+    "guarantee": "100% Crisp Guarantee",
+    "shippingBadge": "Free Shipping > ₹499"
+  },
+  "productPacks": [
+    {
+      "id": "pack-1",
+      "name": "Starter Trial Pouch",
+      "weightGrams": 250,
+      "weightLabel": "250g (1 Pouch)",
+      "pouchesCount": 1,
+      "originalPrice": 299,
+      "discountedPrice": 249,
+      "badge": "Single Pack"
+    },
+    {
+      "id": "pack-2",
+      "name": "Twin Snack Duo",
+      "weightGrams": 500,
+      "weightLabel": "500g (2 Pouches)",
+      "pouchesCount": 2,
+      "originalPrice": 598,
+      "discountedPrice": 449,
+      "badge": "Most Popular",
+      "isPopular": true
+    },
+    {
+      "id": "pack-4",
+      "name": "Family Superfood Bundle",
+      "weightGrams": 1000,
+      "weightLabel": "1kg (4 Pouches)",
+      "pouchesCount": 4,
+      "originalPrice": 1196,
+      "discountedPrice": 799,
+      "badge": "Best Value · Free Delivery"
+    }
+  ],
+  "flavors": [
+    {
+      "id": "himalayan-salt",
+      "name": "Himalayan Pink Salt & Olive Oil",
+      "description": "Slow-roasted in Spanish extra-virgin olive oil with hand-crushed mineral pink salt.",
+      "notes": "Crunchy · Light · Mineral Rich"
+    },
+    {
+      "id": "pudina-spiced",
+      "name": "Fresh Pudina & Roasted Cumin",
+      "description": "Aromatic garden mint, roasted whole jeera, and tangy amchur zest.",
+      "notes": "Tangy · Refreshing · Savory"
+    },
+    {
+      "id": "raw-jumbo",
+      "name": "Pure Naturale Jumbo (Unroasted)",
+      "description": "Raw, sun-dried 6+ soot jumbo seeds ready for your own ghee or air-fry roast.",
+      "notes": "Raw · 100% Unprocessed · Versatile"
+    }
+  ],
+  "neuroPsychology": {
+    "kicker": "The Psychology of Snacking",
+    "title": "Why Your Brain Craves the Crunch. Backed by Neuroscience, Not Willpower.",
+    "facts": [
+      {
+        "num": "01",
+        "title": "The 'Auditory Dopamine' Trigger",
+        "hook": "Why your brain is addicted to the crunch sound, not the grease.",
+        "takeaway": "Instant oral sensory reward with 80% fewer calories than potato chips."
+      },
+      {
+        "num": "02",
+        "title": "The 4 PM Cortisol Craving Curve",
+        "hook": "Why you crave salty crunch every afternoon at your desk.",
+        "takeaway": "Zero mid-afternoon energy crash or post-snack lethargy."
+      },
+      {
+        "num": "03",
+        "title": "Eliminating 'Snacker’s Remorse'",
+        "hook": "How post-snack guilt secretly drains your willpower.",
+        "takeaway": "Pure indulgence with zero cognitive guilt or digestive heaviness."
+      },
+      {
+        "num": "04",
+        "title": "The Visual Satiety Principle",
+        "hook": "Tricking your stomach into feeling full on 105 calories.",
+        "takeaway": "Maximum physical bowl volume with minimal caloric density."
+      },
+      {
+        "num": "05",
+        "title": "The 40% Natural Pacing Effect",
+        "hook": "Why individual lotus seeds end unconscious shovel-eating.",
+        "takeaway": "Natural portion control without restrictive calorie counting."
+      }
+    ]
+  },
+  "trustGuarantees": {
+    "kicker": "Uncompromised Assurance",
+    "title": "100% Trusted. Certified Purity from Farm to Crunch.",
+    "guarantees": [
+      "100% Crispness or Full Refund (7-Day Zero Hassle)",
+      "100% Mithila GI Tagged (#842)",
+      "100% Spanish Olive Oil Glazed (0% Palm Oil)",
+      "100% Lab Tested & FSSAI Approved (#10423000000841)",
+      "100% Safe COD & 24h Air Dispatch"
+    ]
+  },
+  "superfoodBenefits": {
+    "kicker": "Nutritional Superpower",
+    "title": "Snack Without Compromise. Backed by Ancient Wisdom & Modern Science.",
+    "description": "Unlike extruded corn puffs or deep-fried chips laden with palm oil, our roasted makhana delivers deep, satisfying crunch with virtually zero saturated fat and high plant protein."
+  },
+  "craftsmanship": {
+    "kicker": "The Heritage & Origin",
+    "title": "Why 90% of the World’s Finest Makhana Comes From One Sacred Soil.",
+    "location": "Mithila Freshwater Wetland Ecosystems, Bihar"
+  },
+  "faqs": [
+    {
+      "question": "What makes Mithila Makhana superior to regular grocery store fox nuts?",
+      "answer": "Mithila produces over 85% of India’s GI-certified fox nuts. We select only the top 10% 6+ soot jumbo seeds, sun-dry them traditionally, and roast them in cold-pressed olive oil rather than cheap vegetable oil. You get larger, fluffier kernels with zero burnt husks or grit."
+    },
+    {
+      "question": "How long does the crunchiness last after opening?",
+      "answer": "Our pouches feature a heavy-duty moisture barrier and airtight resealable ziplock. Reseal tightly after each serving to preserve peak crispness for up to 90 days after opening. Unopened pouches remain fresh for 12 months from packing."
+    },
+    {
+      "question": "Is this suitable for diabetics, fasting (Vrat), and keto diets?",
+      "answer": "Yes, 100%. Makhana has a low glycemic index (GI 35), is completely gluten-free, zero cholesterol, and rich in natural magnesium. The Raw Naturale and Himalayan Pink Salt variants are fully permissible during Vrat/Navratri fasting."
+    },
+    {
+      "question": "What are the delivery timelines and shipping charges?",
+      "answer": "Orders are dispatched within 24 hours from our packaging facility. Metro deliveries arrive in 2–3 business days; other regions take 3–5 days. All orders over ₹499 qualify for 100% Free Express Shipping."
+    },
+    {
+      "question": "What if I am not satisfied with the crunch?",
+      "answer": "We stand behind our craft with a 100% Crispness Guarantee. If your pouch arrives soggy or damaged, contact us within 7 days for a hassle-free replacement or full refund."
+    }
+  ]
+}
+
