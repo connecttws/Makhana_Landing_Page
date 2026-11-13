@@ -57,23 +57,23 @@ export const CustomerReviews: React.FC = () => {
         {/* Header Summary */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-[#DBE9E0] text-[#1F5C4A] mb-2">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-[#DBE9E0] text-[#1F5C4A] mb-2">
               <Sparkles className="w-3.5 h-3.5 text-[#1F5C4A]" />
               <span>Real Customer Feedback</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-[#1A1A1A] mt-1">
-              Loved by 1,480+ Healthy Snackers
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#1A1A1A] mt-1">
+              Loved by <span className="text-[#1F5C4A]">1,480+ Healthy Snackers</span>
             </h2>
-            <div className="flex items-center gap-3 mt-3">
+            <div className="flex items-center gap-3 mt-2.5">
               <div className="flex text-[#FF7A00]">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-[#FF7A00] text-[#FF7A00]" />
+                  <Star key={i} className="w-4 h-4 fill-[#FF7A00] text-[#FF7A00]" />
                 ))}
               </div>
-              <span className="text-lg font-black text-[#1A1A1A] tabular-nums">
+              <span className="text-base font-bold text-[#1A1A1A] tabular-nums">
                 4.9 out of 5
               </span>
-              <span className="text-sm text-[#666666] font-medium">· 98% recommend to friends</span>
+              <span className="text-xs text-[#666666] font-normal">· 98% recommend to friends</span>
             </div>
           </div>
 
@@ -82,7 +82,7 @@ export const CustomerReviews: React.FC = () => {
             <div className="flex items-center bg-white p-1 rounded-full border border-[#F0E5D8] shadow-xs">
               <button
                 onClick={() => setFilterRating('all')}
-                className={`px-4 py-1.5 text-xs font-bold rounded-full transition-colors cursor-pointer ${
+                className={`px-3.5 py-1.5 text-xs font-semibold rounded-full transition-colors cursor-pointer ${
                   filterRating === 'all'
                     ? 'bg-[#1F5C4A] text-white'
                     : 'text-[#555555] hover:text-[#1F5C4A]'
@@ -92,7 +92,7 @@ export const CustomerReviews: React.FC = () => {
               </button>
               <button
                 onClick={() => setFilterRating('5')}
-                className={`px-4 py-1.5 text-xs font-bold rounded-full transition-colors cursor-pointer ${
+                className={`px-3.5 py-1.5 text-xs font-semibold rounded-full transition-colors cursor-pointer ${
                   filterRating === '5'
                     ? 'bg-[#1F5C4A] text-white'
                     : 'text-[#555555] hover:text-[#1F5C4A]'
@@ -102,7 +102,7 @@ export const CustomerReviews: React.FC = () => {
               </button>
               <button
                 onClick={() => setFilterRating('4')}
-                className={`px-4 py-1.5 text-xs font-bold rounded-full transition-colors cursor-pointer ${
+                className={`px-3.5 py-1.5 text-xs font-semibold rounded-full transition-colors cursor-pointer ${
                   filterRating === '4'
                     ? 'bg-[#1F5C4A] text-white'
                     : 'text-[#555555] hover:text-[#1F5C4A]'
@@ -114,7 +114,7 @@ export const CustomerReviews: React.FC = () => {
 
             <button
               onClick={() => setShowReviewModal(true)}
-              className="px-5 py-2 text-xs font-extrabold text-[#1F5C4A] bg-white border-2 border-[#1F5C4A] rounded-full hover:bg-[#F0F7F4] flex items-center gap-1.5 cursor-pointer shadow-xs transition-colors uppercase tracking-wider"
+              className="px-4 py-2 text-xs font-semibold text-[#1F5C4A] bg-white border-1.5 border-[#1F5C4A] rounded-full hover:bg-[#F0F7F4] flex items-center gap-1.5 cursor-pointer shadow-xs transition-colors uppercase tracking-wider"
             >
               <MessageSquarePlus className="w-4 h-4 text-[#FF7A00]" />
               <span>Write a Review</span>
@@ -127,15 +127,15 @@ export const CustomerReviews: React.FC = () => {
           {filteredReviews.map((rev) => (
             <div
               key={rev.id}
-              className="hom-card p-6 sm:p-7 flex flex-col justify-between"
+              className="hom-card p-5 sm:p-6 flex flex-col justify-between"
             >
-              <div className="space-y-2.5">
+              <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <div className="flex text-[#FF7A00]">
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        className={`w-4 h-4 ${
+                        className={`w-3.5 h-3.5 ${
                           i < rev.rating
                             ? 'fill-[#FF7A00] text-[#FF7A00]'
                             : 'fill-stone-200 text-stone-200'
@@ -143,30 +143,30 @@ export const CustomerReviews: React.FC = () => {
                       />
                     ))}
                   </div>
-                  <span className="text-xs text-[#888888] font-medium">{rev.date}</span>
+                  <span className="text-[11px] text-[#888888] font-normal">{rev.date}</span>
                 </div>
 
-                <h4 className="text-base font-extrabold text-[#1A1A1A]">
+                <h4 className="text-sm sm:text-base font-bold text-[#1A1A1A]">
                   &ldquo;{rev.title}&rdquo;
                 </h4>
 
-                <p className="text-xs sm:text-[13px] text-[#555555] leading-relaxed font-medium">
+                <p className="text-xs text-[#555555] leading-relaxed font-normal">
                   {rev.comment}
                 </p>
               </div>
 
               <div className="pt-3 mt-4 border-t border-[#F5ECE0] flex items-center justify-between text-xs text-[#666666]">
                 <div className="flex items-center gap-1.5">
-                  <span className="font-bold text-[#1A1A1A]">{rev.author}</span>
+                  <span className="font-semibold text-[#1A1A1A]">{rev.author}</span>
                   <span>·</span>
-                  <span>{rev.city}</span>
+                  <span className="text-[11px] text-[#777777]">{rev.city}</span>
                   {rev.verifiedBuyer && (
-                    <span className="flex items-center gap-1 text-[11px] font-bold text-[#1F5C4A] ml-1">
+                    <span className="flex items-center gap-1 text-[11px] font-semibold text-[#1F5C4A] ml-1">
                       <CheckCircle className="w-3.5 h-3.5 stroke-[2.5]" /> Verified Buyer
                     </span>
                   )}
                 </div>
-                <span className="text-[11px] text-[#FF7A00] font-bold hidden sm:inline">
+                <span className="text-[11px] text-[#FF7A00] font-semibold hidden sm:inline">
                   {rev.packPurchased}
                 </span>
               </div>

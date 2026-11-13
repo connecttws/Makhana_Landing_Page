@@ -22,7 +22,7 @@ export const TrustGuarantees: React.FC = () => {
       iconColor: 'text-[#FF7A00]',
       iconBg: 'bg-[#FFE8D6]',
       description:
-        'If your pouch doesn’t deliver that signature airy, delicate wood-fire crunch on every single bite, we refund 100% of your money. No return shipping required.',
+        'Zero soggy kernels. If you aren’t completely in love with the crunch, 100% refund in 7 days. No returns required.',
       statLabel: 'Refund Policy',
       statValue: '7-Day Zero Hassle',
     },
@@ -34,7 +34,7 @@ export const TrustGuarantees: React.FC = () => {
       iconColor: 'text-[#1F5C4A]',
       iconBg: 'bg-[#DBE9E0]',
       description:
-        'Certified by the Government of India. Harvested exclusively from ancestral wetland ponds in Mithila, Bihar. Only top 10% 6+ soot jumbo seeds qualify.',
+        'Certified Govt. GI #842. Top 10% 6+ soot jumbo seeds from ancestral Mithila wetland ponds.',
       statLabel: 'Geographic Tag',
       statValue: 'GI Cert. No. 842',
     },
@@ -46,7 +46,7 @@ export const TrustGuarantees: React.FC = () => {
       iconColor: 'text-[#D9480F]',
       iconBg: 'bg-[#FFE8D6]',
       description:
-        'Unlike supermarket brands fried in hydrogenated palm fat, we slow-roast purely in cold-pressed extra-virgin olive oil with hand-milled pink Himalayan salt.',
+        'Slow-roasted purely in extra-virgin olive oil & pink salt. 0.0% palm oil, 0.0% trans fat.',
       statLabel: 'Trans Fat & Palm Oil',
       statValue: '0.0% Guaranteed',
     },
@@ -58,7 +58,7 @@ export const TrustGuarantees: React.FC = () => {
       iconColor: 'text-[#1F5C4A]',
       iconBg: 'bg-[#DBE9E0]',
       description:
-        'Triple-sifted for zero hard husks. Zero chemical sulfur bleaching, zero synthetic colors, and zero artificial preservatives. Clean, gluten-free superfood.',
+        'FSSAI Lic. #10423000000841. Triple-sifted, zero chemical bleaching, zero artificial preservatives.',
       statLabel: 'Govt. FSSAI License',
       statValue: '#10423000000841',
     },
@@ -70,7 +70,7 @@ export const TrustGuarantees: React.FC = () => {
       iconColor: 'text-[#FF7A00]',
       iconBg: 'bg-[#FFE8D6]',
       description:
-        'Pay with Cash or UPI only when your package arrives at your door. Dispatched in nitrogen-flushed multilayer barrier pouches to lock in harvest freshness.',
+        'Pay with Cash or UPI at your doorstep. Dispatched in nitrogen barrier pouches within 24 hours.',
       statLabel: 'Nationwide Reach',
       statValue: '19,000+ PIN Codes',
     },
@@ -81,19 +81,19 @@ export const TrustGuarantees: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto space-y-2 mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-[#DBE9E0] text-[#1F5C4A]">
+        <div className="text-center max-w-2xl mx-auto space-y-2 mb-12">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-[#DBE9E0] text-[#1F5C4A]">
             <Sparkles className="w-3.5 h-3.5 text-[#1F5C4A]" />
             <span>Uncompromised Quality</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-[#1A1A1A]">
-            100% Trusted Guarantees
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#1A1A1A]">
+            100% <span className="text-[#1F5C4A]">Trusted Guarantees</span>
           </h2>
           <div className="hom-title-underline" />
 
-          <p className="text-[#555555] text-sm sm:text-base font-medium pt-2">
-            Every pouch is backed by our ironclad taste, purity, and doorstep promises.
+          <p className="text-[#555555] text-xs sm:text-sm font-normal pt-2">
+            Every pouch is backed by our ironclad <span className="text-[#1F5C4A] font-semibold">taste purity</span> and <span className="text-[#E65100] font-semibold">doorstep promises</span>.
           </p>
         </div>
 
@@ -109,27 +109,27 @@ export const TrustGuarantees: React.FC = () => {
                 <div>
                   {/* Top Bar with Badge and Icon */}
                   <div className="flex items-center justify-between gap-4 mb-4">
-                    <span className={`px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider ${card.badgeClass}`}>
+                    <span className={`px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider ${card.badgeClass}`}>
                       {card.badge}
                     </span>
-                    <div className={`w-11 h-11 rounded-full ${card.iconBg} flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform`}>
-                      <Icon className={`w-5 h-5 ${card.iconColor}`} />
+                    <div className={`w-10 h-10 rounded-full ${card.iconBg} flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform`}>
+                      <Icon className={`w-4 h-4 ${card.iconColor}`} />
                     </div>
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="text-lg sm:text-xl font-extrabold text-[#1A1A1A] tracking-tight group-hover:text-[#1F5C4A] transition-colors">
+                  <h3 className="text-lg font-bold text-[#1A1A1A] tracking-tight group-hover:text-[#1F5C4A] transition-colors">
                     {card.title}
                   </h3>
-                  <p className="text-xs sm:text-[13px] text-[#555555] leading-relaxed mt-2.5 font-medium">
+                  <p className="text-xs text-[#555555] leading-relaxed mt-2 font-normal">
                     {card.description}
                   </p>
                 </div>
 
                 {/* Bottom Proof Strip */}
-                <div className="pt-4 mt-6 border-t border-[#F5ECE0] flex items-center justify-between text-xs">
-                  <span className="text-[#777777] font-semibold">{card.statLabel}</span>
-                  <span className="font-black text-[#1F5C4A] text-sm tracking-wide">
+                <div className="pt-3.5 mt-5 border-t border-[#F5ECE0] flex items-center justify-between text-xs">
+                  <span className="text-[#777777] font-medium">{card.statLabel}</span>
+                  <span className="font-bold text-[#1F5C4A] text-xs tracking-wide">
                     {card.statValue}
                   </span>
                 </div>
@@ -138,26 +138,26 @@ export const TrustGuarantees: React.FC = () => {
           })}
 
           {/* 6th Card: Direct Founder Promise */}
-          <div className="hom-card p-6 sm:p-7 bg-[#1F5C4A] text-white flex flex-col justify-between border-[#1F5C4A] shadow-xl md:col-span-2 lg:col-span-1">
+          <div className="hom-card p-6 sm:p-7 bg-[#1F5C4A] text-white flex flex-col justify-between border-[#1F5C4A] shadow-md md:col-span-2 lg:col-span-1">
             <div>
               <div className="flex items-center justify-between gap-4 mb-4">
-                <span className="text-[11px] font-black uppercase tracking-wider px-3 py-1 rounded-full bg-white/20 text-[#FFE8D6]">
+                <span className="text-[11px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-white/20 text-[#FFE8D6]">
                   The Freshness Seal
                 </span>
                 <Lock className="w-4 h-4 text-[#FFB872]" />
               </div>
 
-              <h3 className="text-xl font-extrabold text-white tracking-tight">
+              <h3 className="text-xl font-bold text-white tracking-tight">
                 Fresh-Harvest Batch Guarantee
               </h3>
-              <p className="text-xs sm:text-[13px] text-emerald-100/90 leading-relaxed mt-2.5 font-medium">
-                Every pouch shipped this week was popped from the latest seasonal harvest. No old warehouse stock, no soft crunch.
+              <p className="text-xs text-emerald-100/90 leading-relaxed mt-2 font-normal">
+                Every pouch shipped this week was wood-fire popped from the latest seasonal harvest. No old warehouse stock, no soft crunch.
               </p>
             </div>
 
-            <div className="pt-4 mt-6 border-t border-white/20 flex items-center justify-between text-xs">
-              <span className="text-emerald-200 font-semibold">Active Batch</span>
-              <span className="font-black text-[#FFB872] tracking-wider font-mono">
+            <div className="pt-3.5 mt-5 border-t border-white/20 flex items-center justify-between text-xs">
+              <span className="text-emerald-200 font-medium">Active Batch</span>
+              <span className="font-semibold text-[#FFB872] tracking-wider font-mono text-xs">
                 MN-NOV-2026-GI
               </span>
             </div>
@@ -165,7 +165,7 @@ export const TrustGuarantees: React.FC = () => {
         </div>
 
         {/* Quick Horizontal Trust Ribbon */}
-        <div className="mt-12 bg-white rounded-2xl border border-[#F0E5D8] p-4 sm:p-5 shadow-xs flex flex-wrap items-center justify-around gap-4 text-xs font-bold text-[#333333]">
+        <div className="mt-10 bg-white rounded-2xl border border-[#F0E5D8] p-4 shadow-xs flex flex-wrap items-center justify-around gap-4 text-xs font-semibold text-[#333333]">
           <div className="flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4 text-[#1F5C4A] shrink-0" />
             <span>100% Vegetarian &amp; Vrat Permissible</span>
@@ -179,7 +179,7 @@ export const TrustGuarantees: React.FC = () => {
             <span>Non-GMO &amp; Naturally Gluten-Free</span>
           </div>
           <div className="flex items-center gap-2">
-            <RotateCcw className="w-4 h-4 text-[#FF7A00] shrink-0" />
+            <RotateCcw className="w-4 h-4 text-[#E65100] shrink-0" />
             <span>7-Day 100% Refund Policy</span>
           </div>
         </div>

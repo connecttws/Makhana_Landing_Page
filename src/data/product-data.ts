@@ -1,39 +1,160 @@
 import { CustomerReview } from '../types';
 
+export interface CatalogProduct {
+  id: string;
+  name: string;
+  category: 'all' | 'flavored' | 'raw' | 'combo';
+  weight: string;
+  price: number;
+  originalPrice: number;
+  badge: string;
+  badgeType: 'green' | 'orange';
+  rating: number;
+  image: string;
+  notes: string;
+  packId: string;
+  flavorId: string;
+}
+
+export const CATALOG_PRODUCTS: CatalogProduct[] = [
+  {
+    id: 'prod-himalayan-salt',
+    name: 'Himalayan Pink Salt & Olive Oil',
+    category: 'flavored',
+    weight: '250g Pouch',
+    price: 249,
+    originalPrice: 299,
+    badge: 'Bestseller',
+    badgeType: 'green',
+    rating: 4.9,
+    image: '/images/hero_makhana_packaging_1794312039925.jpg',
+    notes: 'Crunchy · Light · Mineral Rich',
+    packId: 'pack-1',
+    flavorId: 'himalayan-salt',
+  },
+  {
+    id: 'prod-peri-peri',
+    name: 'Smoky Peri-Peri Roasted Makhana',
+    category: 'flavored',
+    weight: '250g Pouch',
+    price: 249,
+    originalPrice: 299,
+    badge: 'Spicy Kick',
+    badgeType: 'orange',
+    rating: 4.9,
+    image: '/images/product_peri_peri_makhana.jpg',
+    notes: 'Paprika · Garlic · Bird’s Eye Chili',
+    packId: 'pack-1',
+    flavorId: 'peri-peri',
+  },
+  {
+    id: 'prod-pudina-herb',
+    name: 'Zesty Pudina & Roasted Jeera',
+    category: 'flavored',
+    weight: '250g Pouch',
+    price: 249,
+    originalPrice: 299,
+    badge: 'Garden Mint',
+    badgeType: 'green',
+    rating: 4.8,
+    image: '/images/product_pudina_herb_makhana.jpg',
+    notes: 'Aromatic Mint · Toasted Cumin · Tangy',
+    packId: 'pack-1',
+    flavorId: 'pudina-spiced',
+  },
+  {
+    id: 'prod-raw-jumbo',
+    name: 'Pure Raw Jumbo 6+ Soot Lotus Seeds',
+    category: 'raw',
+    weight: '500g Pack',
+    price: 399,
+    originalPrice: 499,
+    badge: '100% Unroasted',
+    badgeType: 'green',
+    rating: 5.0,
+    image: '/images/product_raw_jumbo_makhana.jpg',
+    notes: 'Oversized Snow-White Seeds · For Ghee Roast',
+    packId: 'pack-2',
+    flavorId: 'raw-jumbo',
+  },
+  {
+    id: 'prod-trio-bundle',
+    name: 'Artisanal 3-Pack Variety Gift Box',
+    category: 'combo',
+    weight: '3 x 250g (750g)',
+    price: 649,
+    originalPrice: 897,
+    badge: 'Save ₹248',
+    badgeType: 'orange',
+    rating: 5.0,
+    image: '/images/product_variety_combo_bundle.jpg',
+    notes: 'Salt + Peri-Peri + Pudina · Luxury Box',
+    packId: 'bundle-3',
+    flavorId: 'trio-bundle',
+  },
+  {
+    id: 'prod-family-pack',
+    name: 'Family Superfood Mega Box (1kg)',
+    category: 'combo',
+    weight: '4 x 250g (1kg)',
+    price: 799,
+    originalPrice: 1196,
+    badge: 'Best Value · Free Delivery',
+    badgeType: 'green',
+    rating: 4.9,
+    image: '/images/product_makhana_bowl_1794312039887.jpg',
+    notes: '4 Pouches · 100% Olive Oil · Zero Palm Oil',
+    packId: 'pack-4',
+    flavorId: 'himalayan-salt',
+  },
+];
+
 export const PRODUCT_IMAGES = [
   {
     id: 'hero-packaging',
     src: '/images/hero_makhana_packaging_1794312039925.jpg',
-    alt: 'Mithila Naturale Organic Roasted Makhana Packaging and Ceramic Bowl',
-    label: 'Packaging & Bowl',
+    alt: 'Mithila Naturale Himalayan Salt Packaging and Ceramic Bowl',
+    label: 'Himalayan Salt',
   },
   {
-    id: 'product-bowl',
-    src: '/images/product_makhana_bowl_1794312039887.jpg',
-    alt: 'Handcrafted ceramic bowl filled with crispy jumbo roasted makhana with Himalayan pink salt',
-    label: 'Crispy Macro Crunch',
+    id: 'product-peri-peri',
+    src: '/images/product_peri_peri_makhana.jpg',
+    alt: 'Smoky Peri-Peri Roasted Makhana Pouch and Bowl',
+    label: 'Peri-Peri Crunch',
+  },
+  {
+    id: 'product-pudina',
+    src: '/images/product_pudina_herb_makhana.jpg',
+    alt: 'Zesty Pudina and Herb Roasted Makhana with Fresh Mint',
+    label: 'Pudina & Jeera',
+  },
+  {
+    id: 'product-raw',
+    src: '/images/product_raw_jumbo_makhana.jpg',
+    alt: 'Pure Raw Jumbo 6+ Soot Lotus Seeds on Linen',
+    label: 'Raw Jumbo Seeds',
+  },
+  {
+    id: 'product-variety-box',
+    src: '/images/product_variety_combo_bundle.jpg',
+    alt: 'Superfood 3-Pack Variety Bundle Gift Box',
+    label: 'Trio Variety Box',
   },
   {
     id: 'harvest-source',
     src: '/images/makhana_harvest_source_1794312040995.jpg',
-    alt: 'Pristine lotus lily pond in Mithila Bihar at sunrise during traditional harvest',
-    label: 'Mithila Origin Farm',
-  },
-  {
-    id: 'lifestyle-snack',
-    src: '/images/makhana_lifestyle_snack_1794312041044.jpg',
-    alt: 'Healthy desk snack pairing roasted makhana with green tea and almonds',
-    label: 'Everyday Superfood',
+    alt: 'Pristine lotus lily pond in Mithila Bihar at sunrise',
+    label: 'Mithila Farm Origin',
   },
 ];
 
 export const NUTRITION_PER_100G = [
-  { label: 'Plant Protein', value: '9.7 g', subtext: 'Essential amino acids for muscle repair' },
-  { label: 'Dietary Fiber', value: '14.5 g', subtext: 'Supports smooth digestion & fullness' },
-  { label: 'Total Fat', value: '0.1 g', subtext: '0% Trans Fat · 0% Cholesterol' },
-  { label: 'Calcium & Magnesium', value: '390 mg', subtext: 'Strengthens bone density & heart rhythm' },
-  { label: 'Potassium', value: '500 mg', subtext: 'Natural electrolyte balance' },
-  { label: 'Glycemic Index', value: 'Low (GI 35)', subtext: 'Zero spike in blood glucose' },
+  { label: 'Plant Protein', value: '9.7 g', subtext: 'Essential amino acids' },
+  { label: 'Dietary Fiber', value: '14.5 g', subtext: 'Smooth digestion' },
+  { label: 'Total Fat', value: '0.1 g', subtext: '0% Trans Fat' },
+  { label: 'Magnesium', value: '390 mg', subtext: 'Cardio rhythm & calm' },
+  { label: 'Potassium', value: '500 mg', subtext: 'Natural electrolyte' },
+  { label: 'Glycemic Index', value: 'GI 35', subtext: 'Zero insulin spike' },
 ];
 
 export const SNACK_COMPARISON = [
@@ -48,7 +169,7 @@ export const SNACK_COMPARISON = [
     isHero: true,
   },
   {
-    snack: 'Movie Theatre Popcorn',
+    snack: 'Popcorn (Theatre)',
     calories: '165 kcal',
     fat: '11.0 g',
     protein: '2.0 g',
@@ -58,7 +179,7 @@ export const SNACK_COMPARISON = [
     isHero: false,
   },
   {
-    snack: 'Fried Potato Chips',
+    snack: 'Potato Chips',
     calories: '220 kcal',
     fat: '15.5 g',
     protein: '1.8 g',
@@ -68,7 +189,7 @@ export const SNACK_COMPARISON = [
     isHero: false,
   },
   {
-    snack: 'Roasted Salted Peanuts',
+    snack: 'Salted Peanuts',
     calories: '190 kcal',
     fat: '14.2 g',
     protein: '7.5 g',
@@ -82,110 +203,87 @@ export const SNACK_COMPARISON = [
 export const CRAFT_STEPS = [
   {
     step: '01',
-    title: 'GI-Tagged Wetland Harvesting',
-    description:
-      'Harvested by skilled indigenous farmers from freshwater ponds in Mithila, Bihar—the fertile agro-climatic epicenter of the world’s finest lotus seeds.',
+    title: 'Mithila Pond Harvest',
+    description: 'Hand-gathered from freshwater lotus ponds in Northern Bihar (GI #842).',
   },
   {
     step: '02',
-    title: 'Hand-Sifted 6+ Soot Jumbo Sizing',
-    description:
-      'We grade every single seed using precision sieves. Only the largest 10% of raw seeds (grade 6+ soot) qualify for our batches, ensuring hollow airy expansion.',
+    title: 'Grade 6+ Soot Sizing',
+    description: 'Precision sieving selects only the largest 10% jumbo seeds for maximum pop.',
   },
   {
     step: '03',
-    title: 'Traditional Wood-Fire Popping',
-    description:
-      'Popped at 280°C in heavy iron pans using aged hardwood coals. The natural steam expansion yields a light, cloud-like crunch without chemical bleaching.',
+    title: 'Wood-Fire Popping',
+    description: 'Popped at 280°C in heavy iron pans using aged hardwood coals. 0% chemicals.',
   },
   {
     step: '04',
-    title: 'Olive Oil & Himalayan Salt Glaze',
-    description:
-      'Gently tumbled with cold-pressed Spanish olive oil and hand-milled pink rock salt. Nitrogen-flushed in multilayer ziplock pouches for 12 months crispness.',
+    title: 'Olive Oil & Salt Glaze',
+    description: 'Slow-tumbled in cold-pressed Spanish olive oil & pink rock salt. 0% palm fat.',
   },
 ];
 
 export const CUSTOMER_REVIEWS: CustomerReview[] = [
   {
     id: 'rev-1',
-    author: 'Priya Sundaram',
+    author: 'Priya S.',
     city: 'Bengaluru',
     rating: 5,
     date: '2 days ago',
-    title: 'Zero unpopped hard shells! The crunchiest makhana I have ever had',
+    title: 'Zero unpopped shells! Crunchiest makhana ever',
     comment:
-      'Most market brands have tiny kernels with black crusty bits that hurt your teeth. Mithila Naturale is completely clean, uniformly huge, and seasoned with genuine olive oil rather than heavy palm fat. Ordering the 4-pack again!',
+      'Completely clean, uniformly huge kernels seasoned with olive oil rather than heavy palm fat. Ordering the 4-pack again!',
     verifiedBuyer: true,
     packPurchased: 'Twin Snack Duo (500g)',
-    flavor: 'Himalayan Pink Salt & Olive Oil',
+    flavor: 'Himalayan Pink Salt',
   },
   {
     id: 'rev-2',
-    author: 'Rohit Kulkarni',
+    author: 'Rohit K.',
     city: 'Pune',
     rating: 5,
     date: '1 week ago',
-    title: 'Perfect 4 PM office snack that doesn’t induce a sugar crash',
+    title: 'Perfect 4 PM office snack with zero crash',
     comment:
-      'I replaced oily potato chips and biscuits with this during my workday. It feels extremely light on the stomach, keeps me full till dinner, and the fresh pudina flavor has a real zesty kick. Highly recommended.',
+      'Replaced chips with this. Feels light, keeps me full till dinner, and the Peri-Peri flavor has a great spicy kick.',
     verifiedBuyer: true,
-    packPurchased: 'Family Superfood Bundle (1kg)',
-    flavor: 'Fresh Pudina & Roasted Cumin',
+    packPurchased: 'Trio Variety Box',
+    flavor: 'Smoky Peri-Peri',
   },
   {
     id: 'rev-3',
-    author: 'Ananya Mehra',
-    city: 'New Delhi',
+    author: 'Ananya M.',
+    city: 'Delhi NCR',
     rating: 5,
     date: '2 weeks ago',
-    title: 'Authentic Mithila quality. Reminds me of my grandmother’s kitchen',
+    title: 'Authentic 6+ soot jumbo size',
     comment:
-      'Being originally from Darbhanga, I know real makhana. This is top-tier 6+ soot size. Plump, snow-white, crispy without being greasy. Packaging is resealable and kept fresh for over 3 weeks.',
+      'Top-tier size. Plump, snow-white, crispy without being greasy. Packaging stayed completely fresh for 3 weeks.',
     verifiedBuyer: true,
     packPurchased: 'Twin Snack Duo (500g)',
-    flavor: 'Himalayan Pink Salt & Olive Oil',
-  },
-  {
-    id: 'rev-4',
-    author: 'Vikramaditya Sen',
-    city: 'Kolkata',
-    rating: 4,
-    date: '3 weeks ago',
-    title: 'Great natural crunch and guilt-free snacking',
-    comment:
-      'Bought the raw jumbo grade for roasting in desi cow ghee at home. Every single seed popped into an airy sphere. Delivery was completed in 48 hours to Kolkata.',
-    verifiedBuyer: true,
-    packPurchased: 'Starter Trial Pouch (250g)',
-    flavor: 'Pure Naturale Jumbo (Unroasted)',
+    flavor: 'Himalayan Pink Salt',
   },
 ];
 
 export const FAQ_LIST = [
   {
-    question: 'What makes Mithila Makhana superior to regular grocery store fox nuts?',
+    question: 'What makes Mithila Makhana superior to grocery store fox nuts?',
     answer:
-      'Mithila produces over 85% of India’s GI-certified fox nuts. We select only the top 10% 6+ soot jumbo seeds, sun-dry them traditionally, and roast them in cold-pressed olive oil rather than cheap vegetable oil. You get larger, fluffier kernels with zero burnt husks or grit.',
+      'We select only top 10% 6+ soot jumbo seeds from Mithila (GI #842) and roast in cold-pressed olive oil rather than palm fat. Zero burnt husks or grit.',
   },
   {
-    question: 'How long does the crunchiness last after opening?',
+    question: 'How long does crunchiness last after opening?',
     answer:
-      'Our pouches feature a heavy-duty moisture barrier and airtight resealable ziplock. Reseal tightly after each serving to preserve peak crispness for up to 90 days after opening. Unopened pouches remain fresh for 12 months from packing.',
+      'Airtight resealable ziplock preserves peak crispness for up to 90 days after opening. Unopened pouches stay fresh for 12 months.',
   },
   {
-    question: 'Is this suitable for diabetics, fasting (Vrat), and keto diets?',
+    question: 'Is this suitable for fasting (Vrat) and diabetics?',
     answer:
-      'Yes, 100%. Makhana has a low glycemic index (GI 35), is completely gluten-free, zero cholesterol, and rich in natural magnesium. The Raw Naturale and Himalayan Pink Salt variants are fully permissible during Vrat/Navratri fasting.',
+      'Yes, 100%. Low glycemic index (GI 35), gluten-free, zero cholesterol, and fully fasting compliant.',
   },
   {
-    question: 'What are the delivery timelines and shipping charges?',
+    question: 'What are the delivery timelines?',
     answer:
-      'Orders are dispatched within 24 hours from our packaging facility. Metro deliveries arrive in 2–3 business days; other regions take 3–5 days. All orders over ₹499 qualify for 100% Free Express Shipping.',
-  },
-  {
-    question: 'What if I am not satisfied with the crunch?',
-    answer:
-      'We stand behind our craft with a 100% Crispness Guarantee. If your pouch arrives soggy or damaged, contact us within 7 days for a hassle-free replacement or full refund.',
+      'Dispatched in 24 hours. Metro deliveries arrive in 2–3 business days. Free shipping on orders over ₹499.',
   },
 ];
-

@@ -70,10 +70,10 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
         <div className="w-screen max-w-md bg-[#FFF8F1] shadow-2xl border-l border-[#F0E5D8] flex flex-col">
           
           {/* Header */}
-          <div className="p-5 border-b border-[#F0E5D8] flex items-center justify-between bg-white">
+          <div className="p-4 sm:p-5 border-b border-[#F0E5D8] flex items-center justify-between bg-white">
             <div className="flex items-center gap-2.5">
               <ShoppingBag className="w-5 h-5 text-[#1F5C4A]" />
-              <h2 className="text-xl font-black text-[#1A1A1A]">
+              <h2 className="text-lg font-bold text-[#1A1A1A]">
                 Your Shopping Bag ({summary.itemCount})
               </h2>
             </div>
@@ -273,9 +273,9 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   </span>
                 </div>
 
-                <div className="flex justify-between text-base font-black text-[#1A1A1A] border-t border-[#F0E5D8] pt-2">
+                <div className="flex justify-between text-base font-bold text-[#1A1A1A] border-t border-[#F0E5D8] pt-2">
                   <span>Grand Total</span>
-                  <span className="tabular-nums text-xl font-black text-[#1F5C4A]">₹{summary.grandTotal}</span>
+                  <span className="tabular-nums text-xl font-bold text-[#1F5C4A]">₹{summary.grandTotal}</span>
                 </div>
               </div>
 
@@ -285,7 +285,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   onClose();
                   onProceedToCheckout();
                 }}
-                className="w-full py-4 px-4 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-white bg-[#1F5C4A] hover:bg-[#164638] active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer rounded-full shadow-lg"
+                className="w-full py-3.5 px-4 text-xs sm:text-sm font-semibold uppercase tracking-wider text-white bg-[#1F5C4A] hover:bg-[#164638] active:scale-[0.99] transition-all flex items-center justify-center gap-2 cursor-pointer rounded-full shadow-md"
               >
                 <span>Proceed to Checkout</span>
                 <ArrowRight className="w-4 h-4 text-[#FFB872]" />

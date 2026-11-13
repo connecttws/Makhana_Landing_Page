@@ -9,8 +9,8 @@ interface PromoBannerProps {
 
 export const PromoBanner: React.FC<PromoBannerProps> = ({ onApplyCoupon }) => {
   return (
-    <div className="bg-[#1F5C4A] text-white text-xs py-2 px-4 border-b border-[#164638] font-sans">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 sm:gap-4 text-center sm:text-left">
+    <div className="bg-[#1F5C4A] text-white text-[11px] sm:text-xs py-1 sm:py-1.5 px-4 border-b border-[#164638] font-sans">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 sm:gap-4 text-center sm:text-left">
         <div className="flex items-center justify-center gap-2 text-[11px] sm:text-xs font-semibold tracking-wide">
           <span className="bg-[#FF7A00] text-white text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full">
             Special Offer

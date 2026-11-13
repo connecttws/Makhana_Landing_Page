@@ -33,33 +33,33 @@ export const CraftsmanshipStory: React.FC = () => {
           </div>
 
           {/* Story Narrative */}
-          <div className="lg:col-span-6 space-y-5">
+          <div className="lg:col-span-6 space-y-4">
             <div className="space-y-2">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-[#DBE9E0] text-[#1F5C4A]">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-[#DBE9E0] text-[#1F5C4A]">
                 <Sparkles className="w-3.5 h-3.5 text-[#1F5C4A]" />
-                <span>The Heritage &amp; Origin</span>
+                <span>Heritage &amp; Origin</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-[#1A1A1A]">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#1A1A1A]">
                 Why 90% of the World’s Makhana Comes From <span className="text-[#1F5C4A]">One Sacred Soil</span>
               </h2>
             </div>
 
-            <p className="text-[#444444] text-base sm:text-lg leading-relaxed font-medium">
+            <p className="text-[#444444] text-sm sm:text-base leading-relaxed font-normal">
               Lotus seeds flourish exclusively in the alluvial freshwater oxbow lakes of Mithila in Northern Bihar. Perennial Himalayan silt delivers micronutrients that cannot be replicated anywhere else on earth.
             </p>
 
-            <p className="text-[#666666] text-sm leading-relaxed font-medium">
-              We partner directly with Mallah artisan cooperatives in Darbhanga and Madhubani. Only the largest 10% of seeds (Grade 6+ Soot Jumbo) qualify for traditional wood-fire roasting.
+            <p className="text-[#666666] text-xs sm:text-sm leading-relaxed font-normal">
+              We partner directly with Mallah artisan cooperatives in Darbhanga. Only the largest 10% of seeds (<span className="text-[#1F5C4A] font-semibold">Grade 6+ Soot Jumbo</span>) qualify for traditional wood-fire roasting.
             </p>
 
             <div className="pt-3 grid grid-cols-2 gap-4 border-t border-[#F0E5D8]">
               <div>
-                <p className="text-3xl font-black text-[#1F5C4A] tabular-nums">100%</p>
-                <p className="text-xs text-[#1F5C4A] font-bold mt-0.5">Direct Farm Traceability</p>
+                <p className="text-2xl sm:text-3xl font-bold text-[#1F5C4A] tabular-nums">100%</p>
+                <p className="text-xs text-[#1F5C4A] font-semibold mt-0.5">Direct Farm Traceability</p>
               </div>
               <div>
-                <p className="text-3xl font-black text-[#FF7A00] tabular-nums">0%</p>
-                <p className="text-xs text-[#666666] font-bold mt-0.5">Palm Oil or Chemical Bleach</p>
+                <p className="text-2xl sm:text-3xl font-bold text-[#E65100] tabular-nums">0%</p>
+                <p className="text-xs text-[#666666] font-semibold mt-0.5">Palm Oil or Chemical Bleach</p>
               </div>
             </div>
           </div>
@@ -67,31 +67,31 @@ export const CraftsmanshipStory: React.FC = () => {
         </div>
 
         {/* 4-Step Craft Sequence */}
-        <div className="space-y-6">
+        <div className="space-y-5">
           <div className="text-center max-w-xl mx-auto space-y-1">
-            <p className="text-xs font-black uppercase tracking-widest text-[#FF7A00]">
+            <p className="text-xs font-semibold uppercase tracking-widest text-[#E65100]">
               The Wood-Fire Method
             </p>
-            <h3 className="text-2xl sm:text-3xl font-black text-[#1A1A1A]">
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A]">
               4 Steps From Lotus Pond to Your Pouch
             </h3>
             <div className="hom-title-underline" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 pt-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 pt-3">
             {CRAFT_STEPS.map((step) => (
               <div
                 key={step.step}
-                className="hom-card p-6 flex flex-col justify-between group"
+                className="hom-card p-5 sm:p-6 flex flex-col justify-between group"
               >
                 <div>
-                  <span className="text-3xl sm:text-4xl font-black text-[#1F5C4A] tabular-nums">
+                  <span className="text-2xl sm:text-3xl font-bold text-[#1F5C4A] tabular-nums">
                     {step.step}.
                   </span>
-                  <h4 className="text-lg font-black text-[#1A1A1A] mt-2 group-hover:text-[#1F5C4A] transition-colors">
+                  <h4 className="text-base font-bold text-[#1A1A1A] mt-1.5 group-hover:text-[#1F5C4A] transition-colors">
                     {step.title}
                   </h4>
-                  <p className="text-xs sm:text-[13px] text-[#555555] mt-2 leading-relaxed font-medium">
+                  <p className="text-xs text-[#555555] mt-1.5 leading-relaxed font-normal">
                     {step.description}
                   </p>
                 </div>

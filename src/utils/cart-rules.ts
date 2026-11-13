@@ -13,6 +13,8 @@ export interface PackOption {
 export interface FlavorOption {
   id: string;
   name: string;
+  shortName?: string;
+  colorDot?: string;
   description: string;
   notes: string;
 }
@@ -26,7 +28,7 @@ export interface CartItem {
 export const PACK_OPTIONS: PackOption[] = [
   {
     id: 'pack-1',
-    name: 'Starter Trial Pouch',
+    name: 'Starter Single Pouch',
     weightGrams: 250,
     weightLabel: '250g (1 Pouch)',
     pouchesCount: 1,
@@ -46,6 +48,16 @@ export const PACK_OPTIONS: PackOption[] = [
     isPopular: true,
   },
   {
+    id: 'bundle-3',
+    name: 'Artisanal 3-Pack Variety Box',
+    weightGrams: 750,
+    weightLabel: '750g (3 Pouches)',
+    pouchesCount: 3,
+    originalPrice: 897,
+    discountedPrice: 649,
+    badge: 'Save ₹248',
+  },
+  {
     id: 'pack-4',
     name: 'Family Superfood Bundle',
     weightGrams: 1000,
@@ -61,20 +73,42 @@ export const FLAVOR_OPTIONS: FlavorOption[] = [
   {
     id: 'himalayan-salt',
     name: 'Himalayan Pink Salt & Olive Oil',
-    description: 'Slow-roasted in Spanish extra-virgin olive oil with hand-crushed mineral pink salt.',
+    shortName: 'Himalayan Pink Salt',
+    colorDot: 'bg-[#FF8DA1]',
+    description: 'Slow-roasted in Spanish olive oil with hand-crushed mineral pink salt.',
     notes: 'Crunchy · Light · Mineral Rich',
+  },
+  {
+    id: 'peri-peri',
+    name: 'Smoky Peri-Peri Roasted',
+    shortName: 'Smoky Peri-Peri',
+    colorDot: 'bg-[#EF4444]',
+    description: 'Crispy seeds tossed in fiery paprika, garlic, and red bird’s eye chili.',
+    notes: 'Spicy · Tangy · Addictive',
   },
   {
     id: 'pudina-spiced',
     name: 'Fresh Pudina & Roasted Cumin',
+    shortName: 'Fresh Pudina & Herb',
+    colorDot: 'bg-[#10B981]',
     description: 'Aromatic garden mint, roasted whole jeera, and tangy amchur zest.',
     notes: 'Tangy · Refreshing · Savory',
   },
   {
     id: 'raw-jumbo',
     name: 'Pure Naturale Jumbo (Unroasted)',
-    description: 'Raw, sun-dried 6+ soot jumbo seeds ready for your own ghee or air-fry roast.',
+    shortName: 'Pure Raw Jumbo',
+    colorDot: 'bg-[#F59E0B]',
+    description: 'Sun-dried 6+ soot jumbo seeds ready for your own ghee or air-fry roast.',
     notes: 'Raw · 100% Unprocessed · Versatile',
+  },
+  {
+    id: 'trio-bundle',
+    name: 'Artisanal 3-Flavor Assortment',
+    shortName: '3-Pack Variety Box',
+    colorDot: 'bg-[#FF7A00]',
+    description: 'One pouch each of Himalayan Pink Salt, Peri-Peri, and Pudina Herb.',
+    notes: 'Variety · Gifting · Multi-Flavor',
   },
 ];
 

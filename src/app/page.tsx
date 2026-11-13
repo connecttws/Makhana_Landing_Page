@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { PromoBanner } from '../components/PromoBanner';
 import { Navbar } from '../components/Navbar';
 import { HeroSection } from '../components/HeroSection';
+import { ProductCollectionGrid } from '../components/ProductCollectionGrid';
 import { ProductPurchaseModule } from '../components/ProductPurchaseModule';
 import { NeuroSnackingPsychology } from '../components/NeuroSnackingPsychology';
 import { SuperfoodBenefits } from '../components/SuperfoodBenefits';
@@ -46,18 +47,22 @@ export default function Home() {
     }, 2500);
   };
 
-  const handleAddToCart = () => {
+  const handleAddToCart = (packId?: string, flavorId?: string, customQty?: number) => {
+    const targetPack = packId || selectedPackId;
+    const targetFlavor = flavorId || selectedFlavorId;
+    const qtyToAdd = customQty !== undefined ? customQty : (packId ? 1 : quantity);
+
     setCartItems((prev) => {
       const existingIndex = prev.findIndex(
-        (it) => it.packId === selectedPackId && it.flavorId === selectedFlavorId
+        (it) => it.packId === targetPack && it.flavorId === targetFlavor
       );
 
       if (existingIndex >= 0) {
         const updated = [...prev];
-        updated[existingIndex].quantity += quantity;
+        updated[existingIndex].quantity += qtyToAdd;
         return updated;
       } else {
-        return [...prev, { packId: selectedPackId, flavorId: selectedFlavorId, quantity }];
+        return [...prev, { packId: targetPack, flavorId: targetFlavor, quantity: qtyToAdd }];
       }
     });
 
@@ -65,18 +70,25 @@ export default function Home() {
     setIsCartOpen(true);
   };
 
-  const handleBuyNow = () => {
+  const handleBuyNow = (packId?: string, flavorId?: string, customQty?: number) => {
+    const targetPack = packId || selectedPackId;
+    const targetFlavor = flavorId || selectedFlavorId;
+    const qtyToAdd = customQty !== undefined ? customQty : (packId ? 1 : quantity);
+
+    if (packId) setSelectedPackId(targetPack);
+    if (flavorId) setSelectedFlavorId(targetFlavor);
+
     setCartItems((prev) => {
       const existingIndex = prev.findIndex(
-        (it) => it.packId === selectedPackId && it.flavorId === selectedFlavorId
+        (it) => it.packId === targetPack && it.flavorId === targetFlavor
       );
 
       if (existingIndex >= 0) {
         const updated = [...prev];
-        updated[existingIndex].quantity = Math.max(updated[existingIndex].quantity, quantity);
+        updated[existingIndex].quantity = Math.max(updated[existingIndex].quantity, qtyToAdd);
         return updated;
       } else {
-        return [...prev, { packId: selectedPackId, flavorId: selectedFlavorId, quantity }];
+        return [...prev, { packId: targetPack, flavorId: targetFlavor, quantity: qtyToAdd }];
       }
     });
 
@@ -146,11 +158,17 @@ export default function Home() {
         
         {/* Campaign Hero Section */}
         <HeroSection
-          onQuickBuy={handleBuyNow}
+          onQuickBuy={() => handleBuyNow()}
           onScrollToPurchase={handleScrollToPurchase}
         />
 
-        {/* Product Purchase Module (PDP) */}
+        {/* Signature Makhana Lineup (6 Products: Flavored, Raw, Combos) */}
+        <ProductCollectionGrid
+          onAddToCart={(packId, flavorId) => handleAddToCart(packId, flavorId)}
+          onQuickBuy={(packId, flavorId) => handleBuyNow(packId, flavorId)}
+        />
+
+        {/* Product Purchase Module (PDP Configurator) */}
         <ProductPurchaseModule
           selectedPackId={selectedPackId}
           selectedFlavorId={selectedFlavorId}
@@ -158,8 +176,8 @@ export default function Home() {
           onPackChange={setSelectedPackId}
           onFlavorChange={setSelectedFlavorId}
           onQuantityChange={setQuantity}
-          onAddToCart={handleAddToCart}
-          onBuyNow={handleBuyNow}
+          onAddToCart={() => handleAddToCart()}
+          onBuyNow={() => handleBuyNow()}
         />
 
         {/* Behavioral Psychology & Neuro-Snacking Science Section */}

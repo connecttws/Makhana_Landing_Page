@@ -22,8 +22,8 @@ export const NeuroSnackingPsychology: React.FC = () => {
       badgeClass: 'hom-badge-orange',
       hook: 'Why your brain is addicted to the crunch sound, not the grease.',
       explanation:
-        'Oxford sensory studies prove that human ears are evolutionary hardwired to associate acoustic crunch frequencies (>60dB) with freshness. The crisp crackle triggers dopamine release in the brain’s pleasure center—giving you instant stress relief without needing sugar or palm fat.',
-      takeaway: 'Instant oral sensory reward with 80% fewer calories than potato chips.',
+        'Acoustic crunch frequencies (>60dB) signal freshness to the brain, releasing dopamine and satisfying oral cravings without sugar or grease.',
+      takeaway: 'Oral sensory reward with 80% fewer calories than chips.',
     },
     {
       num: '02',
@@ -34,8 +34,8 @@ export const NeuroSnackingPsychology: React.FC = () => {
       badgeClass: 'hom-badge-green',
       hook: 'Why you crave salty crunch every afternoon at your desk.',
       explanation:
-        'Between 3 PM and 5 PM, daily circadian cortisol shifts spike cravings for salt and crunch to combat mental fatigue. While fried chips cause an insulin spike followed by sluggish brain fog, Makhana has a low glycemic index (GI 35) and rich magnesium to soothe nerves and maintain razor-sharp focus.',
-      takeaway: 'Zero mid-afternoon energy crash or post-snack lethargy.',
+        'Afternoon cortisol surges demand salt and crunch. Low-GI makhana (GI 35) + magnesium stabilizes nerves and sustains sharp focus.',
+      takeaway: 'Zero 5 PM energy crash or post-snack brain fog.',
     },
     {
       num: '03',
@@ -46,8 +46,8 @@ export const NeuroSnackingPsychology: React.FC = () => {
       badgeClass: 'hom-badge-orange',
       hook: 'How post-snack guilt secretly drains your willpower.',
       explanation:
-        'Psychological research shows that unconscious snacking guilt increases stress and leads to binge eating cycles. Because Mithila Naturale contains 0% palm oil, 0% trans fat, and 9.7g natural plant protein, your subconscious registers zero regret, keeping your mindset positive and clean.',
-      takeaway: 'Pure indulgence with zero cognitive guilt or digestive heaviness.',
+        'With 0% palm oil, 0% trans fat, and 9.7g clean protein, your brain experiences zero guilt or post-snack lethargy.',
+      takeaway: 'Pure crunchy satisfaction with zero cognitive remorse.',
     },
     {
       num: '04',
@@ -58,8 +58,8 @@ export const NeuroSnackingPsychology: React.FC = () => {
       badgeClass: 'hom-badge-green',
       hook: 'Tricking your stomach into feeling full on 105 calories.',
       explanation:
-        'The human brain judges satiety by the visual volume of a portion. A 30g serving of popped jumbo makhana fills an entire large ceramic bowl, triggering natural leptin hormones (fullness signaling) while contributing just ~105 clean calories.',
-      takeaway: 'Maximum physical bowl volume with minimal caloric density.',
+        'The brain judges satiety by visual volume. A 30g bowl of puffed makhana occupies full stomach volume on just 105 clean calories.',
+      takeaway: 'Maximum physical bowl volume with minimal calories.',
     },
     {
       num: '05',
@@ -70,8 +70,8 @@ export const NeuroSnackingPsychology: React.FC = () => {
       badgeClass: 'hom-badge-orange',
       hook: 'Why individual lotus seeds end unconscious shovel-eating.',
       explanation:
-        'Unlike flat potato chips or popcorn grabbed by the handful, jumbo 6+ soot lotus kernels are eaten individually. This slows hand-to-mouth pacing by ~40%, allowing your stomach’s 20-minute fullness signal to reach the brain before you overeat.',
-      takeaway: 'Natural portion control without restrictive calorie counting.',
+        'Eating jumbo lotus seeds individually slows consumption pacing by 40%, letting natural leptin fullness signals reach the brain.',
+      takeaway: 'Natural portion control without restrictive dieting.',
     },
   ];
 
@@ -80,19 +80,19 @@ export const NeuroSnackingPsychology: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto space-y-2 mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-[#DBE9E0] text-[#1F5C4A]">
+        <div className="text-center max-w-2xl mx-auto space-y-2 mb-12">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-[#DBE9E0] text-[#1F5C4A]">
             <Brain className="w-3.5 h-3.5 text-[#1F5C4A]" />
             <span>The Psychology of Snacking</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-[#1A1A1A]">
-            Why Your Brain Craves the Crunch
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#1A1A1A]">
+            Why Your Brain Craves <span className="text-[#E65100]">The Crunch</span>
           </h2>
           <div className="hom-title-underline-orange" />
 
-          <p className="text-[#555555] text-sm sm:text-base font-medium pt-2">
-            Backed by neuroscience and sensory food biology. A snack engineered for dopamine, focus, and zero regret.
+          <p className="text-[#555555] text-xs sm:text-sm font-normal pt-2">
+            Backed by neuroscience. A superfood engineered for <span className="text-[#1F5C4A] font-semibold">dopamine</span>, <span className="text-[#E65100] font-semibold">sustained focus</span>, and zero remorse.
           </p>
         </div>
 
@@ -109,40 +109,40 @@ export const NeuroSnackingPsychology: React.FC = () => {
                   {/* Top Bar with Number, Kicker & Icon */}
                   <div className="flex items-center justify-between gap-4 mb-4">
                     <div className="flex items-center gap-2.5">
-                      <span className="text-2xl font-black text-[#1F5C4A] tabular-nums">
+                      <span className="text-2xl font-bold text-[#1F5C4A] tabular-nums">
                         {fact.num}
                       </span>
-                      <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#777777]">
+                      <span className="text-[11px] font-semibold uppercase tracking-wider text-[#777777]">
                         {fact.kicker}
                       </span>
                     </div>
 
-                    <div className="w-10 h-10 rounded-full bg-[#F0F7F4] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                      <Icon className="w-5 h-5 text-[#1F5C4A]" />
+                    <div className="w-9 h-9 rounded-full bg-[#F0F7F4] flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                      <Icon className="w-4 h-4 text-[#1F5C4A]" />
                     </div>
                   </div>
 
                   {/* Fact Title */}
-                  <h3 className="text-lg sm:text-xl font-extrabold text-[#1A1A1A] tracking-tight group-hover:text-[#1F5C4A] transition-colors">
+                  <h3 className="text-lg font-bold text-[#1A1A1A] tracking-tight group-hover:text-[#1F5C4A] transition-colors">
                     {fact.title}
                   </h3>
 
                   {/* Hook */}
-                  <p className="text-xs font-bold text-[#FF7A00] mt-1 italic">
+                  <p className="text-xs font-semibold text-[#E65100] mt-1">
                     &ldquo;{fact.hook}&rdquo;
                   </p>
 
                   {/* Scientific Explanation */}
-                  <p className="text-xs sm:text-[13px] text-[#555555] leading-relaxed mt-3 font-medium">
+                  <p className="text-xs text-[#555555] leading-relaxed mt-2.5 font-normal">
                     {fact.explanation}
                   </p>
                 </div>
 
                 {/* Bottom Key Benefit Pill */}
-                <div className="pt-4 mt-6 border-t border-[#F5ECE0] flex items-start gap-2 bg-[#F9F6F0] p-3 rounded-xl border border-[#EDE2D5]">
-                  <Sparkles className="w-4 h-4 text-[#FF7A00] shrink-0 mt-0.5" />
-                  <p className="text-xs font-bold text-[#1A1A1A] leading-snug">
-                    <strong className="text-[#FF7A00]">Neuro Benefit:</strong> {fact.takeaway}
+                <div className="pt-3.5 mt-5 border-t border-[#F5ECE0] flex items-start gap-2 bg-[#F9F6F0] p-3 rounded-xl border border-[#EDE2D5]">
+                  <Sparkles className="w-4 h-4 text-[#E65100] shrink-0 mt-0.5" />
+                  <p className="text-xs font-semibold text-[#1A1A1A] leading-snug">
+                    <strong className="text-[#E65100] font-semibold">Neuro Benefit:</strong> {fact.takeaway}
                   </p>
                 </div>
               </div>
@@ -150,10 +150,10 @@ export const NeuroSnackingPsychology: React.FC = () => {
           })}
 
           {/* 6th Callout Card: Brain vs. Junk Snack Comparison */}
-          <div className="hom-card p-6 sm:p-7 bg-[#1F5C4A] text-white flex flex-col justify-between border-[#1F5C4A] shadow-xl md:col-span-2 lg:col-span-1">
+          <div className="hom-card p-6 sm:p-7 bg-[#1F5C4A] text-white flex flex-col justify-between border-[#1F5C4A] shadow-lg md:col-span-2 lg:col-span-1">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-[11px] font-black uppercase tracking-wider text-[#FFB872]">
+                <span className="text-[11px] font-semibold uppercase tracking-wider text-[#FFB872]">
                   The Snacking Verdict
                 </span>
                 <Brain className="w-5 h-5 text-[#FFB872]" />
