@@ -3,40 +3,40 @@
 import React, { useState } from 'react';
 import { PromoBanner } from '../components/PromoBanner';
 import { Navbar } from '../components/Navbar';
-import { HeroSection } from '../components/HeroSection';
-import { ProductCollectionGrid } from '../components/ProductCollectionGrid';
-import { ProductPurchaseModule } from '../components/ProductPurchaseModule';
-import { NeuroSnackingPsychology } from '../components/NeuroSnackingPsychology';
-import { SuperfoodBenefits } from '../components/SuperfoodBenefits';
-import { TrustGuarantees } from '../components/TrustGuarantees';
-import { CraftsmanshipStory } from '../components/CraftsmanshipStory';
+import { HomHeroBanner } from '../components/HomHeroBanner';
+import { HomCategoryCards } from '../components/HomCategoryCards';
+import { HomFeaturedCollection } from '../components/HomFeaturedCollection';
+import { HomSignatureFlavors } from '../components/HomSignatureFlavors';
+import { HomMixAndMatchPromo } from '../components/HomMixAndMatchPromo';
+import { HomStandardCare } from '../components/HomStandardCare';
+import { HomPokharsStory } from '../components/HomPokharsStory';
 import { CustomerReviews } from '../components/CustomerReviews';
 import { FAQSection } from '../components/FAQSection';
-import { Footer } from '../components/Footer';
+import { HomFooter } from '../components/HomFooter';
 import { CartDrawer } from '../components/CartDrawer';
 import { CheckoutModal } from '../components/CheckoutModal';
 import { CartItem, PlacedOrder } from '../types';
 import { Check } from 'lucide-react';
 
 export default function Home() {
-  // Cart state: seed with popular pack-2 so the cart is ready for instant checkout
+  // Cart state: seed with the signature HOM Raw Makhana Pack of 2
   const [cartItems, setCartItems] = useState<CartItem[]>([
     {
-      packId: 'pack-2',
-      flavorId: 'himalayan-salt',
+      packId: 'raw-pack-2',
+      flavorId: 'raw-jumbo',
       quantity: 1,
     },
   ]);
 
-  // PDP Configuration state
-  const [selectedPackId, setSelectedPackId] = useState<string>('pack-2');
-  const [selectedFlavorId, setSelectedFlavorId] = useState<string>('himalayan-salt');
+  // Selected item states for instant purchase flows
+  const [selectedPackId, setSelectedPackId] = useState<string>('raw-pack-2');
+  const [selectedFlavorId, setSelectedFlavorId] = useState<string>('raw-jumbo');
   const [quantity, setQuantity] = useState<number>(1);
 
   // Modals & UI states
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
-  const [couponCode, setCouponCode] = useState<string>('CRUNCH10');
+  const [couponCode, setCouponCode] = useState<string>('HOM10');
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [, setLastPlacedOrder] = useState<PlacedOrder | null>(null);
 
@@ -44,7 +44,7 @@ export default function Home() {
     setToastMessage(msg);
     setTimeout(() => {
       setToastMessage(null);
-    }, 2500);
+    }, 2800);
   };
 
   const handleAddToCart = (packId?: string, flavorId?: string, customQty?: number) => {
@@ -116,15 +116,23 @@ export default function Home() {
 
   const handleApplyCoupon = (code: string) => {
     setCouponCode(code.trim().toUpperCase());
-    showToast(`Coupon ${code} applied!`);
+    showToast(`Coupon ${code} applied successfully!`);
   };
 
   const handleRemoveCoupon = () => {
     setCouponCode('');
   };
 
-  const handleScrollToPurchase = () => {
-    const el = document.getElementById('purchase');
+  const handleMixAndMatchOffer = () => {
+    showToast('Buy 2, Get 1 Free: Add any 3 packs to your cart!');
+    const el = document.getElementById('choose-makhana');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleExploreCollection = () => {
+    const el = document.getElementById('choose-makhana');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }
@@ -133,79 +141,77 @@ export default function Home() {
   const totalCartCount = cartItems.reduce((acc, curr) => acc + curr.quantity, 0);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FFF8F1] text-[#222222] selection:bg-[#FFE0B2] selection:text-[#E65100]">
+    <div className="min-h-screen flex flex-col bg-[#FFF8F1] text-[#2A2A2A] selection:bg-[#FFE8D6] selection:text-[#1F5C4A]">
       
       {/* Toast Notification */}
       {toastMessage && (
-        <div className="fixed bottom-6 right-6 z-50 bg-[#1F5C4A] text-white px-5 py-3.5 rounded-full shadow-2xl flex items-center gap-2.5 text-xs font-bold border border-[#2F856C] animate-bounce">
-          <Check className="w-4 h-4 text-[#FFB872] stroke-[3]" />
+        <div className="fixed bottom-6 right-6 z-50 bg-[#1F5C4A] text-white px-5 py-3.5 rounded-full shadow-2xl flex items-center gap-2.5 text-xs font-semibold border border-[#2F856C] animate-in fade-in slide-in-from-bottom-3 duration-200">
+          <Check className="w-4 h-4 text-[#C8A24A] stroke-[3]" />
           <span>{toastMessage}</span>
         </div>
       )}
 
-      {/* Top Promotional Ticker */}
+      {/* Top Promotional Announcement Bar */}
       <PromoBanner onApplyCoupon={handleApplyCoupon} />
 
-      {/* Strict Luxury Navigation Header */}
+      {/* House of Makhana Navigation Header */}
       <Navbar
         cartItemCount={totalCartCount}
         onOpenCart={() => setIsCartOpen(true)}
         onOpenCheckout={() => setIsCheckoutOpen(true)}
       />
 
-      {/* Main Content Area */}
+      {/* Main Homepage Flow */}
       <main className="flex-1">
         
-        {/* Campaign Hero Section */}
-        <HeroSection
-          onQuickBuy={() => handleBuyNow()}
-          onScrollToPurchase={handleScrollToPurchase}
+        {/* 1. Hero Editorial Visual Banner with Product Hotspot Pin */}
+        <HomHeroBanner
+          onQuickAdd={handleAddToCart}
+          onExplore={handleExploreCollection}
         />
 
-        {/* Signature Makhana Lineup (6 Products: Flavored, Raw, Combos) */}
-        <ProductCollectionGrid
-          onAddToCart={(packId, flavorId) => handleAddToCart(packId, flavorId)}
-          onQuickBuy={(packId, flavorId) => handleBuyNow(packId, flavorId)}
+        {/* 2. "Choose Your Makhana" Category Cards (Flavored & Raw) */}
+        <HomCategoryCards />
+
+        {/* 3. "Premium Raw Makhana" Featured Collection (4 Pack Grid) */}
+        <HomFeaturedCollection
+          onAddToCart={handleAddToCart}
+          onQuickBuy={handleBuyNow}
         />
 
-        {/* Product Purchase Module (PDP Configurator) */}
-        <ProductPurchaseModule
-          selectedPackId={selectedPackId}
-          selectedFlavorId={selectedFlavorId}
-          quantity={quantity}
-          onPackChange={setSelectedPackId}
-          onFlavorChange={setSelectedFlavorId}
-          onQuantityChange={setQuantity}
-          onAddToCart={() => handleAddToCart()}
-          onBuyNow={() => handleBuyNow()}
+        {/* 4. "Our Signature Flavors" (Himalayan Salt, Peri Peri, Cream & Onion, Achari Mango, Pudina) */}
+        <HomSignatureFlavors
+          onAddToCart={handleAddToCart}
+          onQuickBuy={handleBuyNow}
         />
 
-        {/* Behavioral Psychology & Neuro-Snacking Science Section */}
-        <div id="psychology">
-          <NeuroSnackingPsychology />
+        {/* 5. "THE HOM MIX & MATCH EDIT: Buy 2, get 1 free." Offer */}
+        <HomMixAndMatchPromo
+          onApplyOffer={handleMixAndMatchOffer}
+        />
+
+        {/* 6. "THE HOM STANDARD: A little more care in every crunch." (4-Pillar Craft) */}
+        <HomStandardCare />
+
+        {/* 7. "From the Pokhars of Bihar, to Your Home" Direct Mallah Farmers Story + Behind the Crunch */}
+        <div id="pokhars-story">
+          <HomPokharsStory />
         </div>
 
-        {/* Superfood Nutrition Facts & Head-to-Head Comparison */}
-        <SuperfoodBenefits />
-
-        {/* 100% Trusted Guarantees & Certifications Grid */}
-        <div id="guarantees">
-          <TrustGuarantees />
+        {/* 8. "Let customers speak for us" Authentic Reviews */}
+        <div id="reviews">
+          <CustomerReviews />
         </div>
 
-        {/* Mithila Origin & Wood-Fire Craft Story */}
-        <CraftsmanshipStory />
-
-        {/* Real Customer Feedback & Reviews */}
-        <CustomerReviews />
-
-        {/* Common FAQs */}
-        <FAQSection />
+        {/* 9. Frequently Asked Questions */}
+        <div id="faq">
+          <FAQSection />
+        </div>
 
       </main>
 
-      {/* Footer with Certifications */}
-      <Footer />
+      {/* 10. Deep Forest Green House of Makhana Footer */}
+      <HomFooter onExploreCollection={handleExploreCollection} />
 
       {/* Slide-over Cart Drawer */}
       <CartDrawer

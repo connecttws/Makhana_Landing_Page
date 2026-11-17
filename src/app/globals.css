@@ -4,17 +4,17 @@
 @source "../app";
 
 @theme {
-  --font-display: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
-  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-heading: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', 'Noto Sans Japanese', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-sans: 'Montserrat', 'Noto Sans Japanese', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 @layer base {
   :root {
-    --font-display: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
-    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-heading: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
+    --font-display: 'Montserrat', sans-serif;
+    --font-body: 'Montserrat', 'Noto Sans Japanese', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
   }
 
   html {
@@ -22,8 +22,8 @@
   }
 
   body {
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    color: #2D2D2D;
+    font-family: 'Montserrat', 'Noto Sans Japanese', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #2A2A2A;
     background-color: #FFF8F1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -32,27 +32,27 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     letter-spacing: -0.02em;
-    color: #1A1A1A;
+    color: #111111;
   }
 
   p, span, a, button, input, select, textarea {
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Montserrat', 'Noto Sans Japanese', -apple-system, BlinkMacSystemFont, sans-serif;
   }
 }
 
 .font-display {
-  font-family: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .font-body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .font-heading {
-  font-family: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Fine Word Highlights & Subtle Color Shades */

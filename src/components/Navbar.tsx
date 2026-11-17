@@ -17,68 +17,73 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <header className="sticky top-0 z-40 bg-[#FFF8F1]/95 backdrop-blur-md border-b border-[#F0E5D8] transition-colors">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-6 px-6 py-2 sm:py-2.5 lg:py-2.5">
-        {/* Brand Wordmark in Fine Luxury Typography */}
+        {/* Brand Logo matching House of Makhana */}
         <a
           href="#"
-          className="group flex items-center gap-2.5 whitespace-nowrap shrink-0"
+          className="group flex items-center gap-2 whitespace-nowrap shrink-0"
         >
-          <div className="w-8 h-8 rounded-full bg-[#1F5C4A] flex items-center justify-center text-white font-bold text-sm shadow-xs">
-            M
-          </div>
+          <img
+            src="/images/hom/logo_black.png"
+            alt="House of Makhana"
+            className="h-8 sm:h-9 w-auto object-contain"
+            onError={(e) => {
+              // fallback if image fails
+              e.currentTarget.style.display = 'none';
+            }}
+          />
           <div className="flex flex-col">
-            <span className="text-lg sm:text-xl font-bold tracking-tight text-[#1F5C4A] leading-none">
-              MITHILA NATURALE
+            <span className="text-base sm:text-lg font-bold tracking-tight text-[#1F5C4A] leading-none">
+              HOUSE OF MAKHANA
             </span>
-            <span className="text-[9.5px] uppercase tracking-widest text-[#E65100] font-semibold mt-0.5">
-              Premium Jumbo Makhana
+            <span className="text-[9px] uppercase tracking-widest text-[#C8A24A] font-semibold mt-0.5">
+              Rooted in Bihar · Pure Crunch
             </span>
           </div>
         </a>
 
-        {/* Navigation Links in Clean Refined Font */}
-        <nav className="hidden lg:flex items-center gap-6 text-xs font-semibold uppercase tracking-wider text-[#444444]">
+        {/* Navigation Links matching House of Makhana */}
+        <nav className="hidden lg:flex items-center gap-6 text-[13px] font-medium tracking-wide text-[#2A2A2A]">
           <a
-            href="#collection"
-            className="hover:text-[#1F5C4A] transition-colors whitespace-nowrap"
+            href="#"
+            className="hover:text-[#1F5C4A] transition-colors whitespace-nowrap text-[#1F5C4A] font-semibold"
           >
-            All Products
+            Home
           </a>
           <a
-            href="#purchase"
+            href="#choose-makhana"
             className="hover:text-[#1F5C4A] transition-colors whitespace-nowrap"
           >
-            Custom Packs
+            Shop All
           </a>
           <a
-            href="#psychology"
-            className="hover:text-[#1F5C4A] transition-colors whitespace-nowrap flex items-center gap-1 text-[#E65100]"
-          >
-            <Sparkles className="w-3.5 h-3.5 text-[#E65100]" />
-            <span>Snack Psychology</span>
-          </a>
-          <a
-            href="#superfood"
+            href="#premium-raw"
             className="hover:text-[#1F5C4A] transition-colors whitespace-nowrap"
           >
-            Nutrition
+            Raw Makhana
           </a>
           <a
-            href="#guarantees"
+            href="#signature-flavors"
             className="hover:text-[#1F5C4A] transition-colors whitespace-nowrap"
           >
-            100% Trust
+            Flavoured Makhana
           </a>
           <a
-            href="#harvest"
-            className="hover:text-[#1F5C4A] transition-colors whitespace-nowrap"
+            href="#mix-and-match"
+            className="hover:text-[#1F5C4A] transition-colors whitespace-nowrap text-[#C8A24A] font-semibold"
           >
-            Origin &amp; Craft
+            Combos (Buy 2 Get 1)
           </a>
           <a
-            href="#reviews"
+            href="#our-story"
             className="hover:text-[#1F5C4A] transition-colors whitespace-nowrap"
           >
-            Reviews
+            Our Story
+          </a>
+          <a
+            href="#contact"
+            className="hover:text-[#1F5C4A] transition-colors whitespace-nowrap"
+          >
+            Contact
           </a>
         </nav>
 
