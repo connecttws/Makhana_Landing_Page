@@ -9,14 +9,14 @@ export const HomCategoryCards: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         
         {/* Section Header matching House of Makhana */}
-        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-2">
-          <p className="text-xs sm:text-[14px] uppercase tracking-[0.12em] font-semibold text-[#1F5C4A]">
-            Wholesome snacking, roasted in olive oil
-          </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-semibold text-[#111111] tracking-[-1.5px] leading-tight">
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-3">
+          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#111111] tracking-[-1.5px] leading-tight">
             Choose Your Makhana
           </h2>
-          <div className="w-12 h-1 bg-[#1F5C4A] mx-auto rounded-full mt-3" />
+          <div className="w-10 h-0.5 bg-[#C8A24A] mx-auto rounded-full" />
+          <p className="text-sm sm:text-base text-[#555555] font-normal">
+            Wholesome snacking, roasted in olive oil
+          </p>
         </div>
 
         {/* Two Visual Cards */}

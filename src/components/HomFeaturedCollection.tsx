@@ -81,13 +81,16 @@ export const HomFeaturedCollection: React.FC<HomFeaturedCollectionProps> = ({
         
         {/* Section Header matching House of Makhana */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-2">
+          <p className="text-xs uppercase tracking-[0.18em] font-semibold text-[#8C5338]">
+            THE HOM EDIT
+          </p>
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-semibold text-[#111111] tracking-[-1.4px] leading-tight">
             Premium Raw Makhana
           </h2>
-          <p className="text-xs sm:text-sm text-[#6B635C] font-normal leading-relaxed">
-            Everyday essentials, selected for a satisfying crunch. 100% direct from Mithila.
+          <p className="text-sm sm:text-base text-[#6B635C] font-normal leading-relaxed">
+            Everyday essentials, selected for a satisfying crunch.
           </p>
-          <div className="w-12 h-1 bg-[#1F5C4A] mx-auto rounded-full mt-3" />
+          <div className="w-10 h-0.5 bg-[#C8A24A] mx-auto rounded-full mt-2" />
         </div>
 
         {/* 4 Product Grid */}
