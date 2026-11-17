@@ -24,7 +24,7 @@ export const HomHeroBanner: React.FC<HomHeroBannerProps> = ({
   return (
     <section className="relative w-full bg-[#FFF8F1] overflow-hidden border-b border-[#F0E5D8]">
       {/* Editorial Hero Visual Banner */}
-      <div className="relative w-full min-h-[500px] sm:min-h-[580px] lg:h-[calc(100vh-110px)] lg:min-h-[600px] lg:max-h-[760px] flex items-end sm:items-center">
+      <div className="relative w-full min-h-[500px] sm:min-h-[620px] lg:min-h-[720px] flex items-end sm:items-center">
         {/* Background Image */}
         <img
           src="/images/hom/hero_editorial_banner.jpg"
@@ -126,3 +126,4 @@ export const HomHeroBanner: React.FC<HomHeroBannerProps> = ({
     </section>
   );
 };
+
