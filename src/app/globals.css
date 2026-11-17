@@ -211,3 +211,25 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #B8ABA0;
 }
+
+/* Infinite Auto Slow Moving Carousel */
+@keyframes slowMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-slow-marquee {
+  display: flex;
+  width: max-content;
+  animation: slowMarquee 36s linear infinite;
+  will-change: transform;
+}
+
+.animate-slow-marquee:hover {
+  animation-play-state: paused;
+}
+
