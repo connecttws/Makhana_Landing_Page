@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
         {/* Direct Google Fonts Links: Plus Jakarta Sans (Fine & Luxury) + Montserrat */}
@@ -37,7 +37,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-screen bg-[#FFF8F1] text-[#222222] font-sans antialiased selection:bg-[#FFE0B2] selection:text-[#E65100]">
+      <body className="min-h-screen w-full max-w-full overflow-x-clip bg-[#FFF8F1] text-[#222222] font-sans antialiased selection:bg-[#FFE0B2] selection:text-[#E65100]">
         {children}
 
         {/* BooClient CRM Lead Tracker Integration */}

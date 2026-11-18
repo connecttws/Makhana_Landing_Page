@@ -45,10 +45,10 @@ export const HomFooter: React.FC<HomFooterProps> = ({ onExploreCollection }) => 
   };
 
   return (
-    <footer id="footer" className="bg-[#0A1A14] text-[#EDEAE1] font-sans border-t border-[#1E3B30] relative overflow-hidden">
+    <footer id="footer" className="bg-[#0A1A14] text-[#EDEAE1] font-sans border-t border-[#1E3B30] relative overflow-hidden w-full max-w-full">
       
       {/* Subtle ambient luxury gradient glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-96 bg-gradient-to-b from-[#183B2F]/30 via-transparent to-transparent pointer-events-none -z-0" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-72 bg-gradient-to-b from-[#183B2F]/25 via-transparent to-transparent pointer-events-none -z-0" />
 
       {/* TIER 1: Top Editorial Callout matching live House of Makhana */}
       <div className="border-b border-[#1C382D] bg-[#0E231B] relative z-10">

@@ -141,7 +141,7 @@ export default function Home() {
   const totalCartCount = cartItems.reduce((acc, curr) => acc + curr.quantity, 0);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FFF8F1] text-[#2A2A2A] selection:bg-[#FFE8D6] selection:text-[#1F5C4A]">
+    <div className="min-h-screen w-full max-w-full overflow-x-clip flex flex-col bg-[#FFF8F1] text-[#2A2A2A] selection:bg-[#FFE8D6] selection:text-[#1F5C4A]">
       
       {/* Toast Notification */}
       {toastMessage && (

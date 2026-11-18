@@ -18,10 +18,18 @@
   }
 
   html {
-    scroll-behavior: smooth;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+    overscroll-behavior-x: none;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+    overscroll-behavior-x: none;
     font-family: 'Montserrat', 'Noto Sans Japanese', -apple-system, BlinkMacSystemFont, sans-serif;
     color: #2A2A2A;
     background-color: #FFF8F1;
@@ -212,24 +220,8 @@
   background: #B8ABA0;
 }
 
-/* Infinite Auto Slow Moving Carousel */
-@keyframes slowMarquee {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-50%, 0, 0);
-  }
-}
-
-.animate-slow-marquee {
-  display: flex;
-  width: max-content;
-  animation: slowMarquee 36s linear infinite;
-  will-change: transform;
-}
-
-.animate-slow-marquee:hover {
-  animation-play-state: paused;
+/* Touch action helpers to prevent horizontal rubber banding */
+.touch-pan-y {
+  touch-action: pan-y;
 }
 
